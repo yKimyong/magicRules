@@ -1,1 +1,3 @@
-payload: []
+payload: 
+  # Steam
+  - DOMAIN,community.fastly.steamstatic.com
