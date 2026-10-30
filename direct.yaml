@@ -1,1 +1,20 @@
+# PDFgear
+  - DOMAIN,downloadfiles.pdfgear.com
 
+  # Samsung Cloud
+  - DOMAIN-SUFFIX,s-share.samsungcloudcn.com
+
+  # AI / 开发工具
+  - DOMAIN-SUFFIX,qwencloud.com
+  - DOMAIN-SUFFIX,qwen.ai
+  - DOMAIN-SUFFIX,qoder.com
+  - DOMAIN-SUFFIX,getpostman.com
+
+  # DNS / 更新服务
+  - DOMAIN,update.hwdns.net
+
+  # NuGet / Microsoft CDN
+  - DOMAIN-SUFFIX,nuget.org
+  - DOMAIN-SUFFIX,azureedge.net
+  - DOMAIN-SUFFIX,vo.msecnd.net
+  - DOMAIN,api.nuget.org
