@@ -3,11 +3,31 @@ function main(config) {
   const baseUrl =
     "https://raw.githubusercontent.com/yKimyong/magicRules/main";
 
-  const providers = [
-    ["custom-direct", "direct.yaml", "DIRECT"],
-    ["custom-proxy", "proxy.yaml", "♻️ 自动选择"],
-    ["custom-reject", "reject.yaml", "REJECT"]
-  ];
+ const groups = (config["proxy-groups"] || [])
+  .map(group => group.name);
+
+const preferredGroups = [
+  "♻️ 自动选择",
+  "🚀 节点选择",
+  "PROXY",
+  "Proxy",
+  "节点选择",
+  "自动选择"
+];
+
+const proxyGroup =
+  preferredGroups.find(name => groups.includes(name)) ||
+  groups[0];
+
+if (!proxyGroup) {
+  throw new Error("当前订阅不存在可用的代理组");
+}
+
+const providers = [
+  ["custom-direct", "direct.yaml", "DIRECT"],
+  ["custom-proxy", "proxy.yaml", proxyGroup],
+  ["custom-reject", "reject.yaml", "REJECT"]
+];
 
   config["rule-providers"] ||= {};
 
