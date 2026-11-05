@@ -19,3 +19,7 @@ payload:
   - DOMAIN-SUFFIX,azureedge.net
   - DOMAIN-SUFFIX,vo.msecnd.net
   - DOMAIN,api.nuget.org
+
+    # 支付宝
+  - DOMAIN-SUFFIX,alipay.com
+  - DOMAIN-SUFFIX,alipayobjects.com
